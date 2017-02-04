@@ -1,7 +1,10 @@
 var PDFImage = require("pdf-image").PDFImage;
 
-var pdfImage = new PDFImage(__dirname + "/../work/src/QSAR.pdf",
+var pdfFile = __dirname + "/../work/src/QSAR.pdf";
+var pageNum = 22;
+
+var pdfImage = new PDFImage(pdfFile ,
     {convertOptions:{"-density":"400","-geometry":"2000"} });
-pdfImage.convertPage(22).then( function(imagePath) {
+pdfImage.convertPage(pageNum).then( function(imagePath) {
   console.log(imagePath);
 });

@@ -1,8 +1,12 @@
 var tesseract = require('node-tesseract');
 
-var pngFile = __dirname + "/../work/src/QSAR-22.png";
+var pngFile = __dirname + "/../work/QSAR-22.png";
 
-tesseract.process(pngFile,
+var options = {
+  psm: 6
+};
+
+tesseract.process(pngFile,options,
   function(err, text) {
     if (err) {
       console.error(err);

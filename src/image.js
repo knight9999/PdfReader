@@ -1,6 +1,6 @@
 var PDFImage = require("pdf-image").PDFImage;
 
-var pdfFile = __dirname + "/../work/src/QSAR.pdf";
+var pdfFile = __dirname + "/../work/QSAR.pdf";
 var pageNum = 22;
 
 var pdfImage = new PDFImage(pdfFile ,
